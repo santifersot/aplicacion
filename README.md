@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<body>
-<header>
-    <h1>Bienvenido a mi página web</h1>
-</header>
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-<nav>
-    <a href="#home">Inicio</a>
-    <a href="#about">Sobre mí</a>
-    <a href="#contact">Contacto</a>
-</nav>
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
 
-<div class="content">
-    <h2>Contenido principal</h2>
-    <p>Este es un ejemplo simple de una página web. Puedes agregar más contenido aquí.</p>
-</div>
-
-<footer>
-    <p>&copy; 2025 Mi Página Web</p>
-</footer>
-
-</body>
-</html>
-
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
